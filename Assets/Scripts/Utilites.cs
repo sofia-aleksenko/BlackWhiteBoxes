@@ -16,6 +16,10 @@ public class Utilites : MonoBehaviour {
 		scoreMode = ScoreMode.fadeIsNotTheEnd;
 	}
 
+	void Start() {
+		scoreMode = ScoreMode.fadeIsNotTheEnd;
+	}
+
 	public static float GetCameraWidth() {
 		return (float)targetScreenWidth / (float)pixelPerUnit / 2.0f;
 	}
@@ -24,11 +28,11 @@ public class Utilites : MonoBehaviour {
 		return (float)targetScreenHeight / (float)pixelPerUnit / 2.0f;
 	}
 
-	public void SetFadeEqDieMode() {
+	public static void SetFadeEqDieMode() {
 		scoreMode = ScoreMode.fadeEqDie;
 	}
 
-	public void SetFadeIsNotTheEnd() {
+	public static void SetFadeIsNotTheEnd() {
 		scoreMode = ScoreMode.fadeIsNotTheEnd;
 	}
 

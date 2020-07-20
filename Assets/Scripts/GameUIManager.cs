@@ -18,8 +18,9 @@ public class GameUIManager : MonoBehaviour {
 	void Start () {
 		gameOverMessage.gameObject.SetActive(false);
 		Score.staticGameOverEvent.AddListener(GameOver);
+		Utilites.SetFadeIsNotTheEnd();
 		SetResume();
-		SetMode();
+		
 	}
 	
 	void Update () {
@@ -47,7 +48,7 @@ public class GameUIManager : MonoBehaviour {
 		SceneManager.LoadScene("Menu");
 	}
 
-	public void SetMode() {
+	public void ToggleMode() {
 		if (Utilites.scoreMode == Utilites.ScoreMode.fadeEqDie) {
 			Utilites.scoreMode = Utilites.ScoreMode.fadeIsNotTheEnd;
 			modeText.GetComponent<UnityEngine.UI.Text>().text = "fading is not the end";
