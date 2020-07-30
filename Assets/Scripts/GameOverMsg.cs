@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class GameOverMsg : MonoBehaviour {
 
-	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
 
 	void OnEnable() {
+		// puts the object to the front (the last element to be drawn)
 		transform.SetAsLastSibling();
 	}
 }
